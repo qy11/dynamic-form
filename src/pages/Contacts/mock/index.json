@@ -1,0 +1,106 @@
+{
+  "success": true,
+  "code": 0,
+  "msg": "",
+  "data": [
+    {
+      "id": 1,
+      "type": 1,
+      "name": "年龄",
+      "code": "age",
+      "optionConditions": [
+        "=",
+        ">",
+        "<",
+        "<=",
+        ">="
+      ],
+      "defaultValues": [
+        "1-130"
+      ]
+    },
+    {
+      "id": 2,
+      "type": 1,
+      "name": "生日",
+      "code": "birthday",
+      "optionConditions": [
+        "like",
+        "not like"
+      ],
+      "defaultValues": [
+        "yyyy-MM-dd"
+      ]
+    },
+    {
+      "id": 3,
+      "type": 1,
+      "name": "预产期",
+      "code": "birthday1",
+      "optionConditions": [
+        "like",
+        "not like"
+      ],
+      "defaultValues": [
+        "yyyy-MM-dd"
+      ]
+    },
+    {
+      "id": 4,
+      "type": 1,
+      "name": "孕周",
+      "code": "birthday2",
+      "optionConditions": [
+        "=",
+        ">",
+        "<",
+        "<=",
+        ">="
+      ],
+      "defaultValues": [
+        "1-45"
+      ]
+    },
+    {
+      "id": 5,
+      "type": 1,
+      "name": "用户身份",
+      "code": "birthday3",
+      "optionConditions": [
+        "="
+      ],
+      "defaultValues": [
+        "备孕",
+        "孕妇",
+        "宝妈"
+      ]
+    },
+    {
+      "id": 6,
+      "type": 1,
+      "name": "性别",
+      "code": "sex",
+      "optionConditions": [
+        "="
+      ],
+      "defaultValues": [
+        "男",
+        "女",
+        "未知"
+      ]
+    },
+    {
+      "id": 7,
+      "type": 2,
+      "name": "关联标签",
+      "code": "label_id",
+      "optionConditions": [
+        "in"
+      ],
+      "defaultValues": [
+        "传标签id值并放入()内，例如：(1)"
+      ]
+    }
+  ],
+  "requestId": "f8db741616d343627c145b19"
+}

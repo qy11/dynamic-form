@@ -1,0 +1,35 @@
+{
+  "appCode": "mytxl",
+  "ruleConditionList": [
+    {
+      "code": "age",
+      "defaultValue": "19",
+      "groupNum": 1,
+      "groupCondition": "",
+      "name": "年龄",
+      "optionCondition": ">=",
+      "ruleCondition": "",
+      "ruleType": 1
+    },
+    {
+      "code": "sex",
+      "defaultValue": "男",
+      "groupNum": 1,
+      "groupCondition": "",
+      "name": "性别",
+      "optionCondition": "=",
+      "ruleCondition": "and",
+      "ruleType": 1
+    },
+    {
+      "code": "label_id",
+      "defaultValue": "(1)",
+      "groupNum": 2,
+      "groupCondition": "and",
+      "name": "关联标签",
+      "optionCondition": "in",
+      "ruleCondition": "",
+      "ruleType": 1
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+    "success": true,
+    "data": [
+      {
+        "label": "组织名称",
+        "name": "userName",
+        "system": true
+      },
+      {
+        "label": "行业类型",
+        "name": "type",
+        "uiType": "",
+        "system": true
+      },
+      {
+        "label": "行业模板",
+        "name": "template",
+        "system": false
+      },
+      {
+        "label": "行政编码",
+        "name": "coding",
+        "uiType": "",
+        "system": true
+      },
+      {
+        "label": "状态",
+        "name": "depts",
+        "uiType": "depts",
+        "system": true
+      },
+      {
+        "label": "org_id",
+        "name": "status",
+        "uiType": "status",
+        "system": true
+      },
+      {
+        "label": "corpid",
+        "name": "corpid",
+        "uiType": "",
+        "system": true
+      },
+      {
+        "label": "合作伙伴名称",
+        "name": "aname",
+        "uiType": "",
+        "system": true
+      }
+    ]
+  }

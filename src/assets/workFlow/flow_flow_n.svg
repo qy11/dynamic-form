@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>flow_flow_n</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="工作流-直接流程设定-copy-6" transform="translate(-407.000000, -214.000000)" stroke="#636363" stroke-width="2">
+            <g id="分组-13" transform="translate(407.000000, 213.000000)">
+                <g id="flow_flow_n" transform="translate(0.000000, 1.000000)">
+                    <rect id="矩形" x="1" y="1" width="4" height="3"></rect>
+                    <rect id="矩形-copy" x="11" y="12" width="4" height="3"></rect>
+                    <path d="M6,3.11112158 L12.3719643,3.11112158 C13.7710831,3.11112158 14.905293,4.2453315 14.905293,5.64445034 L14.905293,5.64445034 C14.905293,7.04356919 13.7710831,8.17777911 12.3719643,8.17777911 L3.40951845,8.17777911 C2.10857437,8.17777911 1.05395082,9.23240266 1.05395082,10.5333467 L1.05395082,10.5333467 C1.05395082,11.8342908 2.10857437,12.8889144 3.40951845,12.8889144 L9.95557017,12.8889144" id="路径-10"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

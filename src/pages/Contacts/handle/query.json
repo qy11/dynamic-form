@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "code": 0,
+  "msg": "",
+  "data": [
+    {
+      "id": 1,
+      "industryType": "mytxl",
+      "type": 1,
+      "name": "年龄",
+      "code": "age",
+      "optionConditions": ["=", ">", "<", "<=", ">="],
+      "defaultValues": ["1-130"]
+    },
+    {
+      "id": 2,
+      "industryType": "mytxl",
+      "type": 1,
+      "name": "生日",
+      "code": "birthday",
+      "optionConditions": ["like", "not like"],
+      "defaultValues": ["yyyy-MM-dd格式并加单引号，例如：'1999-01-01'"]
+    },
+    {
+      "id": 3,
+      "industryType": "mytxl",
+      "type": 1,
+      "name": "预产期",
+      "code": "confinement_date",
+      "optionConditions": ["like", "not like"],
+      "defaultValues": ["yyyy-MM-dd格式并加单引号，例如：'1999-01-01'"]
+    },
+    {
+      "id": 4,
+      "industryType": "mytxl",
+      "type": 1,
+      "name": "孕周",
+      "code": "gestational_weeks",
+      "optionConditions": ["=", ">", "<", "<=", ">="],
+      "defaultValues": ["1-45"]
+    },
+    {
+      "id": 5,
+      "industryType": "mytxl",
+      "type": 1,
+      "name": "用户身份",
+      "code": "user_type",
+      "optionConditions": ["="],
+      "defaultValues": ["'备孕'", "'孕妇'", "'宝妈'"]
+    },
+    {
+      "id": 6,
+      "industryType": "mytxl",
+      "type": 1,
+      "name": "性别",
+      "code": "sex",
+      "optionConditions": ["="],
+      "defaultValues": ["'男'", "'女'", "'未知'"]
+    },
+    {
+      "id": 7,
+      "industryType": "mytxl",
+      "type": 2,
+      "name": "关联标签",
+      "code": "label_id",
+      "optionConditions": ["in"],
+      "defaultValues": ["传标签id值并放入()内，例如：(1)"]
+    }
+  ],
+  "requestId": "21e810fafb9146624b2179a1"
+}

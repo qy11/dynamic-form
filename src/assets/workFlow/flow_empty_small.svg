@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="63px" height="56px" viewBox="0 0 63 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>flow_empty_small</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M22.0544554,7.62475248 L22.0544554,2.4 C22.0544554,1.0745166 23.128972,6.8757656e-16 24.4544554,4.4408921e-16 L37.6990099,4.4408921e-16 C39.0244933,-2.15392964e-15 40.0990099,1.0745166 40.0990099,2.4 L40.0990099,7.62475248 C40.0990099,8.95023587 39.0244933,10.0247525 37.6990099,10.0247525 L24.4544554,10.0247525 C23.128972,10.0247525 22.0544554,8.95023587 22.0544554,7.62475248 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="18.0445545" height="10.0247525" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <path d="M0,30.4811881 L0,25.6574257 C-1.623249e-16,24.3319423 1.0745166,23.2574257 2.4,23.2574257 L15.6445545,23.2574257 C16.9700379,23.2574257 18.0445545,24.3319423 18.0445545,25.6574257 L18.0445545,30.4811881 C18.0445545,31.8066715 16.9700379,32.8811881 15.6445545,32.8811881 L2.4,32.8811881 C1.0745166,32.8811881 3.06868566e-16,31.8066715 -4.4408921e-16,30.4811881 Z" id="path-3"></path>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="18.0445545" height="9.62376238" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <path d="M22.0544554,52.5356436 L22.0544554,47.3108911 C22.0544554,45.9854077 23.128972,44.9108911 24.4544554,44.9108911 L37.6990099,44.9108911 C39.0244933,44.9108911 40.0990099,45.9854077 40.0990099,47.3108911 L40.0990099,52.5356436 C40.0990099,53.861127 39.0244933,54.9356436 37.6990099,54.9356436 L24.4544554,54.9356436 C23.128972,54.9356436 22.0544554,53.861127 22.0544554,52.5356436 Z" id="path-5"></path>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="18.0445545" height="10.0247525" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+        <path d="M22.0544554,30.4811881 L22.0544554,25.6574257 C22.0544554,24.3319423 23.128972,23.2574257 24.4544554,23.2574257 L37.6990099,23.2574257 C39.0244933,23.2574257 40.0990099,24.3319423 40.0990099,25.6574257 L40.0990099,30.4811881 C40.0990099,31.8066715 39.0244933,32.8811881 37.6990099,32.8811881 L24.4544554,32.8811881 C23.128972,32.8811881 22.0544554,31.8066715 22.0544554,30.4811881 Z" id="path-7"></path>
+        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="18.0445545" height="9.62376238" fill="white">
+            <use xlink:href="#path-7"></use>
+        </mask>
+        <path d="M44.1089109,30.4811881 L44.1089109,25.6574257 C44.1089109,24.3319423 45.1834275,23.2574257 46.5089109,23.2574257 L59.7534653,23.2574257 C61.0789487,23.2574257 62.1534653,24.3319423 62.1534653,25.6574257 L62.1534653,30.4811881 C62.1534653,31.8066715 61.0789487,32.8811881 59.7534653,32.8811881 L46.5089109,32.8811881 C45.1834275,32.8811881 44.1089109,31.8066715 44.1089109,30.4811881 Z" id="path-9"></path>
+        <mask id="mask-10" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="18.0445545" height="9.62376238" fill="white">
+            <use xlink:href="#path-9"></use>
+        </mask>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="工作流-直接流程设定-copy-6" transform="translate(-1274.000000, -397.000000)">
+            <g id="分组-3" transform="translate(1265.000000, 384.000000)">
+                <g id="flow_empty_small" transform="translate(9.623762, 13.232673)">
+                    <use id="路径" stroke="#0CADE3" mask="url(#mask-2)" stroke-width="1.6" fill="#EDF5FF" stroke-dasharray="1.6,0.4" xlink:href="#path-1"></use>
+                    <use id="路径-copy" stroke="#B2C7E1" mask="url(#mask-4)" stroke-width="1.6" fill="#FFFFFF" stroke-dasharray="1.6,0.4" xlink:href="#path-3"></use>
+                    <use id="路径-copy-4" stroke="#B2C7E1" mask="url(#mask-6)" stroke-width="1.6" fill="#EDF5FF" stroke-dasharray="1.6,0.4" xlink:href="#path-5"></use>
+                    <use id="路径-copy-3" stroke="#B2C7E1" mask="url(#mask-8)" stroke-width="1.6" fill="#EDF5FF" stroke-dasharray="1.6,0.4" xlink:href="#path-7"></use>
+                    <use id="路径-copy-5" stroke="#B2C7E1" mask="url(#mask-10)" stroke-width="1.6" fill="#FFFFFF" stroke-dasharray="1.6,0.4" xlink:href="#path-9"></use>
+                    <path d="M29.2722772,32.8811881 L29.2722772,37.4406553 C29.2722772,38.3243109 28.5559328,39.0406553 27.6722772,39.0406553 L10.8207921,39.0406553 C9.49530868,39.0406553 8.42079208,40.1151719 8.42079208,41.4406553 L8.42079208,44.9108911" id="路径-4-copy-2" stroke="#B2C7E1" stroke-width="0.8" transform="translate(18.846535, 38.896040) scale(1, -1) translate(-18.846535, -38.896040) "></path>
+                    <path d="M53.3316832,32.8811881 L53.3316832,37.4406553 C53.3316832,38.3243109 52.6153388,39.0406553 51.7316832,39.0406553 L34.880198,39.0406553 C33.5547146,39.0406553 32.480198,40.1151719 32.480198,41.4406553 L32.480198,44.9108911" id="路径-4-copy-3" stroke="#B2C7E1" stroke-width="0.8" transform="translate(42.905941, 38.896040) scale(-1, -1) translate(-42.905941, -38.896040) "></path>
+                    <path d="M30.8762376,32.480198 L30.8762376,45.3118812" id="路径-5-copy" stroke="#B2C7E1" stroke-width="0.8"></path>
+                    <path d="M29.4727723,10.0247525 L29.4727723,14.5842197 C29.4727723,15.4678753 28.7564279,16.1842197 27.8727723,16.1842197 L11.0212871,16.1842197 C9.69580373,16.1842197 8.62128713,17.2587363 8.62128713,18.5842197 L8.62128713,22.0544554" id="路径-4" stroke="#B2C7E1" stroke-width="0.8"></path>
+                    <path d="M53.1311881,10.0247525 L53.1311881,14.5842197 C53.1311881,15.4678753 52.4148437,16.1842197 51.5311881,16.1842197 L34.679703,16.1842197 C33.3542196,16.1842197 32.279703,17.2587363 32.279703,18.5842197 L32.279703,22.0544554" id="路径-4-copy" stroke="#B2C7E1" stroke-width="0.8" transform="translate(42.705446, 16.039604) scale(-1, 1) translate(-42.705446, -16.039604) "></path>
+                    <path d="M30.8762376,10.0247525 L30.8762376,22.0544554" id="路径-5" stroke="#B2C7E1" stroke-width="0.8"></path>
+                    <polygon id="三角形" fill="#B2C7E1" transform="translate(8.821782, 21.653465) scale(1, -1) translate(-8.821782, -21.653465) " points="8.82178218 20.450495 10.8267327 22.8564356 6.81683168 22.8564356"></polygon>
+                    <polygon id="三角形-copy" fill="#B2C7E1" transform="translate(30.876238, 21.653465) scale(1, -1) translate(-30.876238, -21.653465) " points="30.8762376 20.450495 32.8811881 22.8564356 28.8712871 22.8564356"></polygon>
+                    <polygon id="三角形-copy-2" fill="#B2C7E1" transform="translate(52.930693, 21.653465) scale(1, -1) translate(-52.930693, -21.653465) " points="52.9306931 20.450495 54.9356436 22.8564356 50.9257426 22.8564356"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

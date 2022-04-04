@@ -1,0 +1,116 @@
+.footerWrapper {
+  display: flex;
+  justify-content: center;
+}
+.footerWrapper :global .buttonList {
+  margin: -8px 0 0 -8px;
+}
+.footerWrapper :global .buttonList button:not(:last-child):after {
+  content: '|';
+  position: relative;
+  left: 5px;
+  color: #ddd;
+}
+.footerWrapper :global .buttonList .cfListButton {
+  margin: 8px 0 0 8px;
+  display: inline-block;
+}
+.footerWrapper :global .buttonList :global .ant-btn-link {
+  padding: 0;
+}
+.detailModal {
+  transition: right 0.2s linear;
+}
+.detailModal :global .ant-btn::after {
+  content: '' !important;
+}
+.detailModal :global .cf-form-item {
+  margin-bottom: 0;
+}
+.detailModal :global .cf-form-text-item-teacher {
+  line-height: 20px;
+  padding: 6px 10px 6px 0;
+}
+.detailModal :global .cf-form-text-item-teacher_label {
+  color: rgba(0, 0, 0, 0.45);
+}
+.detailModal :global .cf-form-text-item-teacher_value {
+  word-break: break-all;
+}
+.detailModal :global .ant-form-item-control-input {
+  min-height: 36px;
+}
+.detailModal :global .ant-drawer-header {
+  padding: 0;
+}
+.detailModal :global .ant-form-item-label > label {
+  min-height: 36px;
+  color: rgba(0, 0, 0, 0.45);
+}
+.detailModal :global .user-title-content {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  padding-left: 24px;
+  width: 100%;
+  height: 140px;
+  border-radius: 4px 4px 0 0;
+  background: url('lan.png') no-repeat center center;
+  background-size: cover;
+}
+.detailModal :global .user-title-content .default-icon {
+  width: 80px;
+}
+.detailModal :global .user-title-content .img {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.detailModal :global .user-info {
+  height: 68px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.detailModal :global .user-info .user-name {
+  font-size: 26px;
+  text-indent: -2px;
+  color: #fff;
+  margin-bottom: 0;
+}
+.detailModal :global .user-info .user-card {
+  font-size: 14px;
+  color: #ffffff;
+  margin: 10px 0 0 0;
+  line-height: 0;
+}
+.detailModal :global .user-info .user-card .user-gender {
+  margin-right: 8px;
+}
+.detailModal :global .ss-images-upload {
+  width: 92px;
+}
+.detailModal :global .ss-images-upload .imageContainer {
+  margin-top: 0;
+}
+.detailModal :global .ss-images-upload .imageContainer .imageItemPreviewContainer {
+  height: 80px;
+  margin: 0;
+  border-radius: 50%;
+}
+.detailModal :global .ss-images-upload .imageContainer .imageItemPreviewContainer img {
+  border-radius: 50%;
+}
+.detailModal :global .cf-compose-form-container {
+  padding: 0;
+}
+.detailModal :global .ant-drawer-content-wrapper {
+  border-radius: 0 0 4px 4px;
+}
+.detailModal :global .ant-drawer-content {
+  border-radius: 0 0 4px 4px !important;
+}
+.detailModal :global .ant-drawer-footer {
+  padding: 8px 10px;
+}

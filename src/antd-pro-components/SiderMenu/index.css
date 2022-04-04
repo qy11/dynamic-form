@@ -1,0 +1,76 @@
+:local .sider {
+  height: 100vh;
+  max-height: 100%;
+  overflow: auto;
+  z-index: 20;
+  position: relative;
+  background-color: #f9f9f9 !important;
+  box-shadow: 2px 0px 6px 0px rgba(0, 21, 41, 0.12);
+}
+:local .sider-menu {
+  padding-top: 20px;
+  background-color: #f9f9f9;
+  max-height: unset;
+}
+:local .sider :global .ant-menu-inline .ant-menu-item {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #000;
+}
+:local .sider :global .menu-name-text {
+  color: #000;
+}
+:local .sider :global .ant-menu-submenu .ant-menu-inline .ant-menu-item {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  color: #000;
+  background-color: #f9f9f9;
+}
+:local .sider :global .ant-menu-light .ant-menu-inline .ant-menu-sub {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.45) inset !important;
+}
+:local .sider :global .ant-menu-light.ant-menu-light:not(.ant-menu-horizontal) .ant-menu-item-selected,
+:local .sider :global .ant-menu-light.ant-menu-light:not(.ant-menu-horizontal) li.ant-menu-item-only-child:hover {
+  color: #000;
+  background-color: #fff;
+}
+:local .sider :global .ant-menu-light.ant-menu-light:not(.ant-menu-horizontal) .ant-menu-item-selected:after,
+:local .sider :global .ant-menu-light.ant-menu-light:not(.ant-menu-horizontal) li.ant-menu-item-only-child:hover:after {
+  right: unset;
+  left: 0;
+}
+:local .sider :global .ant-menu.ant-menu-light,
+:local .sider :global .ant-menu-light .ant-menu-sub,
+:local .sider :global .ant-menu.ant-menu-light,
+:local .sider :global .ant-menu-submenu,
+:local .sider :global .ant-menu-submenu-selected,
+:local .sider :global .ant-menu-light .ant-menu-inline.ant-menu-sub {
+  color: #000;
+  background-color: #f9f9f9;
+}
+:local .sider :global .ant-menu-item-only-child:hover > a > .anticon,
+:local .sider :global .ant-menu-item-selected > a > .anticon {
+  color: #1785ec;
+  background-color: #fff;
+}
+:local .sider :global .ant-menu-inline .ant-menu-item:hover .menu-name-text,
+:local .sider :global .ant-menu-item-selected .menu-name-text,
+:local .sider :global .ant-menu-inline .ant-menu-item:hover .anticon-menu svg,
+:local .sider :global .ant-menu-item-selected .anticon-menu svg {
+  color: #1785ec;
+}
+:local .sider :global .ant-menu-inline .ant-menu-item:hover {
+  background-color: #fff;
+}
+:local .sider :global .ant-menu-inline .ant-menu-item:hover .menu-name-text::before {
+  position: absolute;
+  width: 3px;
+  height: 40px;
+  content: '';
+  left: 0;
+  background-color: #1785ec;
+}
+:local .sider :global .ant-menu-submenu-title span,
+:local .sider :global .ant-menu-submenu-active span {
+  color: #000;
+}

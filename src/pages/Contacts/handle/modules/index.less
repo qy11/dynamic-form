@@ -1,0 +1,47 @@
+.ssp-form-list {
+  display: flex;
+  flex-direction: column;
+
+  .relation-select {
+    width: 244px;
+    margin: 16px 0;
+  }
+
+  :global {
+    .ssp-select {
+      margin: 16px 0;
+    }
+
+    .ssp-form {
+      border: 1px solid #DFE1E8;
+      background: #FBFCFC;
+      padding: 16px;
+      position: relative;
+      display: flex;
+
+      .label-title {
+        flex: 0 0 50px;
+      }
+
+      .form-item {
+        flex: 1;
+
+        .add-text {
+          margin-top: 10px;
+
+          span {
+            color: #2C7EF8;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .icon-delList {
+        position: absolute;
+        top: -6px;
+        right: -8px;
+      }
+    }
+  }
+
+}

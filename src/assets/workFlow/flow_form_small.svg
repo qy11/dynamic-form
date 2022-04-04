@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="81px" height="81px" viewBox="0 0 81 81" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>flow_form_small</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="40.5" cy="40.5" r="40.5"></circle>
+        <rect id="path-3" x="31.7661538" y="21.4468085" width="77.8092308" height="11.4382979"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="77.8092308" height="11.4382979" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <rect id="path-5" x="0" y="7.50638298" width="17.8461538" height="5.71914894"></rect>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="17.8461538" height="5.71914894" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="工作流-直接流程设定-copy-7" transform="translate(-1265.000000, -445.000000)">
+            <g id="flow_form_small" transform="translate(1265.000000, 445.000000)">
+                <g id="分组-4">
+                    <g id="椭圆形-2">
+                        <g id="分组-3">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="Mask" fill="#EDEDED" xlink:href="#path-1"></use>
+                            <g id="配图/1蓝" mask="url(#mask-2)">
+                                <g transform="translate(15.053097, 19.353982)">
+                                    <path d="M0.4,83.2425532 L115.243077,83.2425532 L115.243077,4 C115.243077,2.0117749 113.631302,0.4 111.643077,0.4 L4,0.4 C2.0117749,0.4 0.4,2.0117749 0.4,4 L0.4,83.2425532 Z" id="路径" stroke-opacity="0.5" stroke="#9AB6D8" stroke-width="0.8" fill="#FFFFFF" fill-rule="evenodd"></path>
+                                    <path d="" id="路径" stroke="#D8D8D8" stroke-width="0.5" fill="none"></path>
+                                    <use id="矩形-copy-7" stroke="#91D7F9" mask="url(#mask-4)" stroke-width="1.6" fill="#EDF5FF" fill-rule="evenodd" stroke-dasharray="1.2,0.8" xlink:href="#path-3"></use>
+                                    <rect id="矩形" stroke="none" fill="#EDF5FF" fill-rule="evenodd" x="16.7753846" y="4.2893617" width="8.92307692" height="3.21702128"></rect>
+                                    <rect id="矩形-copy" stroke="none" fill="#EDF5FF" fill-rule="evenodd" x="16.7753846" y="8.5787234" width="5.35384615" height="1.78723404"></rect>
+                                    <g id="分组" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(3.569231, 21.446809)">
+                                        <path d="M0,0 L17.8461538,0 L17.8461538,5.00425532 L0,5.00425532 L0,0 Z M0,15.7276596 L17.8461538,15.7276596 L17.8461538,20.7319149 L0,20.7319149 L0,15.7276596 Z M0,23.2340426 L17.8461538,23.2340426 L17.8461538,28.2382979 L0,28.2382979 L0,23.2340426 Z M0,30.7404255 L17.8461538,30.7404255 L17.8461538,35.7446809 L0,35.7446809 L0,30.7404255 Z" id="合并形状" fill="#EDF5FF"></path>
+                                        <use id="矩形-copy-2" stroke="#91D7F9" mask="url(#mask-6)" stroke-width="1.6" fill="#EDF5FF" stroke-dasharray="1.2,0.8" xlink:href="#path-5"></use>
+                                    </g>
+                                    <rect id="矩形" stroke="none" fill-opacity="0.5" fill="#9AB6D8" fill-rule="evenodd" x="0" y="14.6553191" width="115.643077" height="1"></rect>
+                                    <ellipse id="椭圆形" stroke="none" fill="#EDF5FF" fill-rule="evenodd" cx="8.74461538" cy="7.32765957" rx="4.46153846" ry="4.46808511"></ellipse>
+                                    <rect id="矩形" stroke="none" fill-opacity="0.5" fill="#9AB6D8" fill-rule="evenodd" x="24.9846154" y="15.3702128" width="1" height="68.2723404"></rect>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="点击" transform="translate(34.084158, 50.524752)" fill="#A0A0A0" fill-rule="nonzero">
+                        <path d="M0,0 L1.81228312,9.86955531 C1.81228312,9.86955531 3.15287465,8.57320318 4.25762158,7.67088387 L6.68806428,10.727567 C6.78488484,10.8511401 6.99838766,10.8604663 7.1622357,10.7485511 L8.19995304,10.0350914 C8.36380318,9.92317607 8.41841971,9.72965672 8.3191167,9.60608313 L5.95322139,6.63332837 C7.18954527,6.16468221 9.22277228,5.63308366 9.22277228,5.63308366 L0,0 Z" id="形状"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

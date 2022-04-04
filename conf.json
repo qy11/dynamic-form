@@ -1,0 +1,40 @@
+{
+  "mode": "sit",
+  "debug": false,
+  "scripts": [
+    "https://gw.alipayobjects.com/os/lib/react/16.13.0/umd/react.production.min.js",
+    "https://gw.alipayobjects.com/os/lib/react-dom/16.13.0/umd/react-dom.production.min.js"
+  ],
+  "sittool": "nosources-source-map",
+  "url": {
+    "suosi": "fe-m.community-dev.easyj.top",
+    "auth": "//gateway.community-dev.easyj.top/auth",
+    "collect": "//gateway.community-dev.easyj.top/collect-form",
+    "receipt": "//gateway.community-dev.easyj.top/receipt",
+    "microWish": "//gateway.community-dev.easyj.top/micro-wish",
+    "wish": "//gateway.community-dev.easyj.top/micro-wish",
+    "usercenter": "//gateway.community-dev.easyj.top/user-center",
+    "permission": "//gateway.community-dev.easyj.top/permission-center",
+    "homework": "//gateway.community-dev.easyj.top/game",
+    "operation": "//gateway.community-dev.easyj.top/operation",
+    "equipment": "//gateway.community-dev.easyj.top/equipment",
+    "game": "//funlowcodeplat.community-dev.easyj.top",
+    "cms": "//gateway.community-dev.easyj.top/cms",
+    "mock": "//yapi.sitops.suosihulian.com/mock/54",
+    "file": "//gateway.community-dev.easyj.top/file-center",
+    "workflow": "//gateway.community-dev.easyj.top/workflow",
+    "activity": "//gateway.community-dev.easyj.top/activity",
+    "publicity": "//gateway.community-dev.easyj.top/publicity",
+    "workflow-mobile": "//gateway.community-dev.easyj.top/workflow/mobile",
+    "group": "//gateway.community-dev.easyj.top/group",
+    "workbench": "//gateway.community-dev.easyj.top/workbench",
+    "external": "//gateway.community-dev.easyj.top/external-service",
+    "notice": "//gateway.community-dev.easyj.top/notice",
+    "circles": "//gateway.community-dev.easyj.top/circles",
+    "worknews": "//gateway.community-dev.easyj.top/work-news",
+    "task": "//gateway.community-dev.easyj.top/task",
+    "workwechat": "//gateway.community-dev.easyj.top/wechat-robot",
+    "parking": "//gateway.community-dev.easyj.top/disabled-parking",
+    "interaction": "//gateway.community-dev.easyj.top/interaction"
+  }
+}
