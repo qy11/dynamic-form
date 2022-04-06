@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { message } from 'antd';
 import { gotoLogin } from '../utils/utils';
-import packageData from '../../package.json';
 
 export default async function net(url, options = {}) {
   return new Promise((resolve, reject) => {

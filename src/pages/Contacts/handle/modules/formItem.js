@@ -2,17 +2,20 @@
 import React, { useState, useEffect } from 'react';
 import { Select, Space, Input, InputNumber, DatePicker } from 'antd';
 import { isEmpty } from 'lodash';
+import moment from 'moment';
 import styles from './formItem.less';
 
 const { Option } = Select;
+
+const dateFormat = 'YYYY-MM-DD';
+
 /**
  *
- * @param num 索引值  删除功能用
  * @param data ajax后端select的值
  * @param parentItem 父级遍历的内容  删除功能用
  * @param handleDelList 删除
  * @param handleFormItem onChange('type', 值, boolean)
- * @param parentNum
+ * @param parentNum 祖组件的index
  *
  * @returns
  */
@@ -31,7 +34,6 @@ const FormItemCom = ({ data, parentItem, handleDelList, handleFormItem, parentNu
 
   useEffect(() => {
     if (type) {
-      // console.log('type', type);
       const dataItem = data.find(iv => iv.code === type);
       setDataItem(dataItem || {});
     } else {
@@ -45,9 +47,9 @@ const FormItemCom = ({ data, parentItem, handleDelList, handleFormItem, parentNu
   }, [dataItem]);
 
   const onChangeCode = value => {
-    setEcho({ ...echo, code: value });
-    setType(value);
+    setEcho({ code: value });
     setDataItem({});
+    setType(value);
     handleFormItem({ parentNum, type: 'code', value, id: parentItem.id, reFresh: true });
   };
 
@@ -82,7 +84,8 @@ const FormItemCom = ({ data, parentItem, handleDelList, handleFormItem, parentNu
   };
 
   const handleDefaultValueDate = (date, dateString) => {
-    setEcho({ ...echo, defaultValue: date });
+    console.log('date', date, dateString);
+    setEcho({ ...echo, defaultValue: dateString });
     handleFormItem({ parentNum, type: 'defaultValue', value: dateString, id: parentItem.id });
   };
 
@@ -105,14 +108,22 @@ const FormItemCom = ({ data, parentItem, handleDelList, handleFormItem, parentNu
           return (
             <>
               {selectFn(dataItem?.optionConditions)}
-              <DatePicker onChange={handleDefaultValueDate} />
+              <DatePicker
+                onChange={handleDefaultValueDate}
+                format={dateFormat}
+                value={echo?.defaultValue ? moment(echo?.defaultValue || '', dateFormat) : ''}
+              />
             </>
           );
         case 'confinement_date':
           return (
             <>
               {selectFn(dataItem?.optionConditions)}
-              <DatePicker onChange={handleDefaultValueDate} />
+              <DatePicker
+                onChange={handleDefaultValueDate}
+                format={dateFormat}
+                value={echo?.defaultValue ? moment(echo?.defaultValue || '', dateFormat) : ''}
+              />
             </>
           );
         case 'gestational_weeks':
@@ -123,6 +134,7 @@ const FormItemCom = ({ data, parentItem, handleDelList, handleFormItem, parentNu
                 min={fnMin(dataItem.defaultValues)}
                 max={fnMax(dataItem.defaultValues)}
                 onChange={handleDefaultValue}
+                value={echo?.defaultValue || ''}
               />
             </>
           );

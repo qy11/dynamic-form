@@ -1,5 +1,3 @@
-/* eslint-disable no-plusplus */
-/* eslint-disable no-param-reassign */
 import React, { useState, useEffect, forwardRef, useImperativeHandle } from 'react';
 import { PlusOutlined } from '@ant-design/icons';
 import { Select } from 'antd';
@@ -22,6 +20,13 @@ const relationArr = [
 ];
 
 function Modules(props, ref) {
+  /**
+   * @param num 删除用
+   * @param handleDelParentList 删除函数
+   * @param grandItem item
+   * @param grandIndex index
+   */
+
   const { num, handleDelParentList, grandItem, grandIndex } = props;
 
   const initialDataFn = () => {
@@ -35,35 +40,38 @@ function Modules(props, ref) {
   /**
    * 回显的数据
    */
-  const [data, setData] = useState(grandItem);
+  const [data, setData] = useState(grandItem || []);
 
   /**
    * 需要返回的数据
    */
-  const [outParams, setOutParams] = useState([]);
+  const [outParams, setOutParams] = useState(grandItem || []);
 
   const setOutPutData = () => {
     const bufferArr = mockData.data.filter(item => outParams.some(iv => iv.code === item.code));
-    console.log('bufferArr', bufferArr);
-    return outParams.map((it, idx) => {
-      return {
-        ...it,
-        name: bufferArr[idx]?.name,
-        ruleType: bufferArr[idx]?.type,
-        key: idx,
-      };
+    // console.log('bufferArr', bufferArr);
+    // console.log('==outParams~~', outParams);
+
+    const finalArr = [];
+
+    outParams.forEach(it => {
+      bufferArr.forEach(buffer => {
+        if (it.code === buffer.code) {
+          finalArr.push({
+            ...it,
+            name: buffer?.name,
+            ruleType: buffer?.type,
+            key: it.id,
+          });
+        }
+      });
     });
+    return finalArr;
   };
 
   useImperativeHandle(ref, () => ({
     getData: setOutPutData(),
   }));
-
-  // useEffect(() => {
-  //   if (count !== initialDataFn().length) {
-  //     setData([...data, { key: count }]);
-  //   }
-  // }, [count]);
 
   useEffect(() => {
     // console.log('outParams', outParams);
@@ -73,7 +81,7 @@ function Modules(props, ref) {
     setData([...data, { key: data[data.length - 1].key + 1 }]);
   };
 
-  const handleDelList = params => {
+  const handleDeleteList = params => {
     setData(data.filter(item => item.key !== params));
     setOutParams(outParams.filter(item => item.id !== params));
   };
@@ -86,19 +94,20 @@ function Modules(props, ref) {
       key: idx,
     }));
     console.log('title', e, outParams);
+
     let newParams = [];
 
     if (grandIndex === 1) {
-      newParams = outParams.map((item, idx) => ({
+      newParams = outParams.map(item => ({
         ...item,
         groupCondition: '',
-        key: idx,
+        key: item.id,
       }));
     } else {
-      newParams = outParams.map((item, idx) => ({
+      newParams = outParams.map(item => ({
         ...item,
         groupCondition: e.value,
-        key: idx,
+        key: item.id,
       }));
     }
     setOutParams([...newParams]);
@@ -154,7 +163,7 @@ function Modules(props, ref) {
               data={mockData.data}
               parentItem={item}
               parentNum={grandIndex}
-              handleDelList={handleDelList}
+              handleDeleteList={handleDeleteList}
               handleFormItem={handleFormItem}
             />
           ))}

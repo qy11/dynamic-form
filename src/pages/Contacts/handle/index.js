@@ -2,6 +2,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Button } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
 import DynamicList from './modules';
+import mockDATA from './data.json';
+import { sortMulArr } from './modules/utils';
+import net from '@/services/net';
+import { url, getPathnameBybase } from '@/services/service-utils';
 import styles from './index.less';
 
 const DATA = [
@@ -47,31 +51,42 @@ const DATA = [
 function Handle() {
   const paramsRef = useRef([]);
 
-  const initialDataFn = () => {
-    const initialData = [];
-    for (let i = 1; i < 2; i += 1) {
-      initialData.push({ id: i });
-    }
-    return initialData;
-  };
+  // const initialDataFn = () => {
+  //   const initialData = [];
+  //   for (let i = 1; i < 2; i += 1) {
+  //     initialData.push({ id: i });
+  //   }
+  //   return initialData;
+  // };
 
-  // const [data, setData] = useState(initialDataFn());
-  // const [data, setData] = useState(DATA);
-  const [data, setData] = useState([[{ id: 1 }]]);
+  // const [columns, setColumns] = useState([]);
+  const [columns, setColumns] = useState(sortMulArr(mockDATA.ruleConditionList, 'groupNum'));
+  // const [columns, setColumns] = useState([[{ id: 1 }]]);
+
+  useEffect(() => {
+    net(`http://192.168.2.126:8080/web/label/rule/detail`, {
+      method: 'GET',
+      params: {
+        id: 40,
+      },
+    }).then(res => {
+      console.log('ajax', res);
+      const { data } = res;
+      // setColumns(sortMulArr(data.ruleConditionList, 'groupNum'));
+    });
+  }, []);
 
   const handleClick = () => {
-    setData([...data, [{ id: data[data.length - 1][0].id + 1 }]]);
+    setColumns([...columns, [{ id: columns[columns.length - 1][0].id + 1 }]]);
   };
   const handleDelParentList = num => {
-    setData(data.filter(item => item[0].id !== num));
+    setColumns(columns.filter(item => item[0].id !== num));
   };
   const handleSubmit = () => {
     const arr = [];
     console.log(paramsRef.current);
     const flatArr = paramsRef.current.flat(Infinity);
-    // console.log('flatArr', flatArr);
     flatArr.forEach(it => {
-      // eslint-disable-next-line no-unused-expressions
       (it?.getData || []).forEach(iv => {
         arr.push(iv);
       });
@@ -80,7 +95,7 @@ function Handle() {
   };
   return (
     <div className={styles['dynamic-list']}>
-      {data.map((item, index) => (
+      {columns.map((item, index) => (
         <DynamicList
           key={item[0].id}
           num={item[0].id}
@@ -105,7 +120,3 @@ function Handle() {
 }
 
 export default Handle;
-
-/**
-
- */
