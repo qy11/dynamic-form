@@ -27,7 +27,7 @@ function Modules(props, ref) {
    * @param grandIndex index
    */
 
-  const { num, handleDelParentList, grandItem, grandIndex } = props;
+  const { num, handleDelParentList, handleDeleteParentListFirst, grandItem, grandIndex } = props;
 
   const initialDataFn = () => {
     const initialDataChild = [];
@@ -40,12 +40,12 @@ function Modules(props, ref) {
   /**
    * 回显的数据
    */
-  const [data, setData] = useState(grandItem || []);
+  const [data, setData] = useState(grandItem || [{}]);
 
   /**
    * 需要返回的数据
    */
-  const [outParams, setOutParams] = useState(grandItem || []);
+  const [outParams, setOutParams] = useState(grandItem || [{}]);
 
   const setOutPutData = () => {
     const bufferArr = mockData.data.filter(item => outParams.some(iv => iv.code === item.code));
@@ -53,19 +53,21 @@ function Modules(props, ref) {
     // console.log('==outParams~~', outParams);
 
     const finalArr = [];
-
-    outParams.forEach(it => {
-      bufferArr.forEach(buffer => {
-        if (it.code === buffer.code) {
-          finalArr.push({
-            ...it,
-            name: buffer?.name,
-            ruleType: buffer?.type,
-            key: it.id,
-          });
-        }
+    if (bufferArr?.length) {
+      outParams.forEach(it => {
+        bufferArr.forEach(buffer => {
+          if (it.code === buffer.code) {
+            finalArr.push({
+              ...it,
+              name: buffer?.name,
+              ruleType: buffer?.type,
+              key: it.id,
+            });
+          }
+        });
       });
-    });
+    }
+
     return finalArr;
   };
 
@@ -78,22 +80,22 @@ function Modules(props, ref) {
   }, [outParams]);
 
   const handleClick = () => {
-    setData([...data, { key: data[data.length - 1].key + 1 }]);
+    setData([...data, { id: data[data.length - 1].id + 1 }]);
   };
 
   const handleDeleteList = params => {
-    setData(data.filter(item => item.key !== params));
+    setData(data.filter(item => item.id !== params));
     setOutParams(outParams.filter(item => item.id !== params));
   };
 
   const handleTitleSelect = e => {
-    // setData([...data, { key: data[data.length - 1].key + 1 }]);
-    data.map((iv, idx) => ({
-      ...data,
-      groupCondition: e.value,
-      key: idx,
-    }));
     console.log('title', e, outParams);
+    const titleData = data.map(iv => ({
+      ...iv,
+      groupCondition: e.value,
+      key: iv.id,
+    }));
+    setData([...titleData]);
 
     let newParams = [];
 
@@ -157,14 +159,15 @@ function Modules(props, ref) {
       <section className="ssp-form">
         <div className="label-title">第{grandIndex + 1}组</div>
         <div className="form-item">
-          {data.map(item => (
+          {(data || []).map((item, index) => (
             <FormItem
-              key={item.key}
+              key={item.id}
               data={mockData.data}
               parentItem={item}
               parentNum={grandIndex}
               handleDeleteList={handleDeleteList}
               handleFormItem={handleFormItem}
+              parentIndex={index}
             />
           ))}
           <p className="add-text">
@@ -172,6 +175,14 @@ function Modules(props, ref) {
               <PlusOutlined /> 增加规则
             </span>
           </p>
+          {grandIndex === 0 && (
+            <img
+              src={delSvg}
+              alt=""
+              className="icon-delList"
+              onClick={() => handleDeleteParentListFirst(num)} // 第一个应该是隐藏
+            />
+          )}
           {grandIndex !== 0 && (
             <img
               src={delSvg}

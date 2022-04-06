@@ -13,13 +13,20 @@ const dateFormat = 'YYYY-MM-DD';
  *
  * @param data ajax后端select的值
  * @param parentItem 父级遍历的内容  删除功能用
- * @param handleDelList 删除
+ * @param handleDeleteList 删除
  * @param handleFormItem onChange('type', 值, boolean)
  * @param parentNum 祖组件的index
  *
  * @returns
  */
-const FormItemCom = ({ data, parentItem, handleDelList, handleFormItem, parentNum }) => {
+const FormItemCom = ({
+  data,
+  parentItem,
+  handleDeleteList,
+  handleFormItem,
+  parentNum,
+  parentIndex,
+}) => {
   /**
    * @param type 类型
    * @param dataItem 显示的数据
@@ -195,8 +202,8 @@ const FormItemCom = ({ data, parentItem, handleDelList, handleFormItem, parentNu
           ))}
         </Select>
         {dynamicRest(type, dataItem)}
-        {parentItem.id !== 1 && (
-          <span className={styles['item-del']} onClick={() => handleDelList(parentItem.id)}>
+        {parentIndex !== 0 && (
+          <span className={styles['item-del']} onClick={() => handleDeleteList(parentItem.id)}>
             删除
           </span>
         )}

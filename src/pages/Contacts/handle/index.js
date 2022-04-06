@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Button } from 'antd';
+import { Button, Switch } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
+import classnames from 'classnames';
 import DynamicList from './modules';
 import mockDATA from './data.json';
 import { sortMulArr } from './modules/utils';
@@ -61,6 +62,7 @@ function Handle() {
 
   // const [columns, setColumns] = useState([]);
   const [columns, setColumns] = useState(sortMulArr(mockDATA.ruleConditionList, 'groupNum'));
+  const [isShow, setIsShow] = useState(true);
   // const [columns, setColumns] = useState([[{ id: 1 }]]);
 
   useEffect(() => {
@@ -76,11 +78,19 @@ function Handle() {
     });
   }, []);
 
+  const onChangeSwitch = checked => {
+    console.log('switch', checked);
+    setIsShow(checked);
+  };
+
   const handleClick = () => {
     setColumns([...columns, [{ id: columns[columns.length - 1][0].id + 1 }]]);
   };
   const handleDelParentList = num => {
     setColumns(columns.filter(item => item[0].id !== num));
+  };
+  const handleDeleteParentListFirst = () => {
+    setIsShow(false);
   };
   const handleSubmit = () => {
     const arr = [];
@@ -94,28 +104,40 @@ function Handle() {
     console.log('submit', arr);
   };
   return (
-    <div className={styles['dynamic-list']}>
-      {columns.map((item, index) => (
-        <DynamicList
-          key={item[0].id}
-          num={item[0].id}
-          grandIndex={index}
-          ref={f => {
-            paramsRef.current[item[0].id] = f;
-          }}
-          grandItem={item}
-          handleDelParentList={handleDelParentList}
+    <>
+      <span>
+        <Switch
+          checked={isShow}
+          onChange={onChangeSwitch}
+          checkedChildren="开"
+          unCheckedChildren="关"
         />
-      ))}
+      </span>
 
-      <p className={styles['add-text']}>
-        <span onClick={handleClick}>
-          <PlusOutlined />
-          增加一组规则
-        </span>
-        <Button onClick={handleSubmit}>提交</Button>
-      </p>
-    </div>
+      <div className={classnames(styles['dynamic-list'], { [styles.isShow]: !isShow })}>
+        {(columns || []).map((item, index) => (
+          <DynamicList
+            key={item[0].id}
+            num={item[0].id}
+            grandIndex={index}
+            ref={f => {
+              paramsRef.current[item[0].id] = f;
+            }}
+            grandItem={item}
+            handleDelParentList={handleDelParentList}
+            handleDeleteParentListFirst={handleDeleteParentListFirst}
+          />
+        ))}
+
+        <p className={styles['add-text']}>
+          <span onClick={handleClick}>
+            <PlusOutlined />
+            增加一组规则
+          </span>
+          <Button onClick={handleSubmit}>提交</Button>
+        </p>
+      </div>
+    </>
   );
 }
 
